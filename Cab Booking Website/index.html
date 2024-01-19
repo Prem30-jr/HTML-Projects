@@ -1,0 +1,424 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Booking Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      overflow-x: hidden;
+
+    }
+
+    header {
+      padding: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo {
+      width: 40px;
+      height: auto;
+      margin-bottom: 2px;
+    }
+
+    nav {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 40px;
+      color: black;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.10s;
+
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav i {
+      margin-top: 40px;
+      margin-left: 10px;
+    }
+
+    nav a:active {
+      border-bottom-color: black;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+    }
+
+    #left-content {
+      margin-left: 40px;
+      flex: 1;
+      padding-right: 350px;
+      /* Add some spacing to separate the two columns */
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #image-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #image-content img {
+      width: 500px;
+      height: auto;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      margin: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #34BFF6;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button a {
+      text-decoration: none;
+      font-weight: 300;
+      color: black;
+    }
+
+    button:hover {
+      background-color: white;
+    }
+
+    #info {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    #info p {
+      font-size: 18px;
+    }
+
+    #info i {
+      font-size: 24px;
+    }
+
+    #about {
+      margin-top: 80px;
+    }
+    #about-top{
+      margin-bottom: 40px;
+    }
+    #about-content img {
+      padding: 40px;
+      float: left;
+      margin-left: 2px;
+    }
+
+    #about-contents {
+      display: flex;
+      align-items: center;
+    }
+
+    #about-contents,
+    #image2 {
+      float: left;
+      padding: 10px;
+      margin-right: 50px;
+      margin-bottom: 60px;
+    }
+
+    #about-contents p {
+      padding: 60px;
+      margin-right: 40px;
+      margin-bottom: 50px;
+      justify-content: space-between;
+      color: #694E50;
+      line-height: 1.5;
+    }
+
+    #about-content p {
+      padding: 80px;
+      margin-right: 40px;
+      justify-content: space-between;
+      color: #694E50;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 60px;
+    }
+
+    #contact {
+      margin-top: 80px;
+      background-color: #333;
+      width: 100%;
+      padding: 60px;
+    }
+
+    #contact-link ul li {
+      list-style-type: none;
+    }
+
+    #contact-link ul li a:hover,
+    #contact-link ul li a i:hover {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <!-- Your logo image goes here -->
+      <img src="Images/logo.png" alt="Logo" width="100px">
+    </div>
+
+    <div id="navigation">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><i class="fa-solid fa-phone"></i><a href="#phone">Request a Call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <div id="left-content">
+      <h1 style="color: blue; font-size: 50px;">Taxi</h1>
+      <h1 style="color: blue; font-size: 50px;">Ordering!</h1>
+      <br>
+      <p style="font-size: 20px;">
+        Goal setting is one of the most
+        important activities you can do in your
+        small business, regardless of how old
+        your business is,<br><br>
+        <button><a href="#services"><b>START NOW</b></a></button>
+      </p>
+    </div>
+    <div id="image-content">
+      <img src="Images/taxi.png" alt="Taxi Image 1">
+    </div>
+  </main>
+
+  <div id="info">
+    <p>More info</p>
+    <a href="#services"><i class="fa-solid fa-arrow-down"></i></a>
+  </div><br><br><br><br>
+
+  <h1 style="text-align: center;"><b>Online Booking</b></h1>
+  <form>
+    <section id="services">
+      <h2 style="text-align: center;">Personal Information</h2>
+      <label><b>Name </b></label>
+      <input type="text" id="name" required>
+      <label><b>Email </b></label>
+      <input type="email" name="email" required>
+      <label><b>Phone Number</b></label>
+      <input type="number" name="num" required>
+      <label><b>Address</b></label>
+      <textarea rows="5" cols="10" required></textarea><br><br>
+      <label><b>No of Passengers </b></label>
+      <input type="number" name="Quantity"><br><br>
+      <label><b>Type of Car</b></label>
+      <select>
+        <option>Sedan</option>
+        <option>Innova</option>
+        <option>Maruti caz</option>
+      </select>
+    </section>
+
+    <section style="margin-left: 25px;">
+      <h2 style="text-align: center;">Our Details</h2>
+      <label><b>Pickup</b></label>
+      <select>
+        <option>Aminjikarrai</option>
+        <option>Pachayappas</option>
+        <option>Metha Nagar</option>
+        <option>Choolaimedu</option>
+        <option>Chennai Central</option>
+        <option>Villivakkam</option>
+        <option>Periyaarpathai</option>
+        <option>Anna Nagar</option>
+        <option>Koyambedu</option>
+      </select>
+      <label><b>Drop off</b></label>
+      <select>
+        <option>Aminjikarrai</option>
+        <option>Pachayappas</option>
+        <option>Metha Nagar</option>
+        <option>Choolaimedu</option>
+        <option>Chennai Central</option>
+        <option>Villivakkam</option>
+        <option>Periyaarpathai</option>
+        <option>Anna Nagar</option>
+        <option>Koyambedu</option>
+      </select>
+      <label><b>Date</b></label>
+      <input type="date" name="date" required>
+      <label><b>Time</b></label>
+      <input type="time" name="time" required>
+      <label for="extras">Additional Options:</label>
+      <b>Wifi</b><input type="checkbox" id="wifi" name="extras" value="wifi">
+      <label><b>Payment Option</b></label>
+      <input type="radio" id="card" name="paymentOption" required> Card
+      <input type="radio" id="cash" name="paymentOption" required> Cash<br><br>
+  
+      <button class="form" onclick="msg()"><a href="#booked"><b>Confirm Booking</b></a></button>
+    </section>
+  </form>
+  </section>
+  <section id="about">
+    <div id="about-top">
+      <h1 style="text-align: center; font-size: 40px;">Why Ride <span
+          style="color: yellow; font-size: 40px; text-align: center;">With Taxi</span></h1>
+    </div>
+
+    <div id="about-content">
+      <img src="Images/img-3.png" width="400px" height="300px" id="image">
+      <p><span style="font-size: 26px; color: black;"><b>Taxi for Every Pocket</b></span><br><br>It is a long
+        established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout.
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+        as It is a long established fact that a reader will be distracted by the readable
+      </p>
+      <button style="margin-bottom: 20px;"><a href="#services">BOOK NOW</a></button>
+    </div>
+
+    <div id="about-contents">
+      <div style="flex: 1; padding-right: 20px;">
+        <p><span style="font-size: 26px; color: black;"><b>Secure and Safer Rides</b></span><br><br>It is a long
+          established fact that a reader will be distracted by the readable content of a page when looking at its
+          layout.
+          The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+          as It is a long established fact that a reader will be distracted by the readable
+        </p>
+        <button style="margin-left: 60px;"><a href="#services">BOOK NOW</a></button>
+      </div>
+      <img style="float: right;" src="Images/img-4.png" width="400px" height="300px" id="image2">
+    </div>
+
+    <div id="about-content">
+      <img src="Images/img-5.png" width="400px" height="300px" id="image">
+      <p><span style="font-size: 26px; color: black;"><b>Taxi for Every Pocket</b></span><br><br>It is a long
+        established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout.
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+        as It is a long established fact that a reader will be distracted by the readable
+      </p>
+      <button style="margin-bottom: 20px;"><a href="#services">BOOK NOW</a></button>
+    </div>
+  </section>
+  <section id="contact">
+    <div id="contact-us" style="display: flex; justify-content: space-between; color: white;">
+      <div style="flex: 1; padding-right: 20px;">
+        <h2><b>Address</b></h2><br>
+        <p style="color:#fff;">It is a long established fact that a reader will be distracted by the readable content
+          of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+          normal distribution of letters</p>
+      </div>
+      <div id="contact-link" style="flex: 1; padding-left: 100px;">
+        <h2>Follow Us</h2><br>
+        <ul>
+          <li><a href="#" style="text-decoration: none; color: white;"><i class="fa-brands fa-facebook"></i>
+              Facebook</a></li><br>
+          <li><a href="#" style="text-decoration: none; color: white;"><i class="fa-brands fa-twitter"></i> Twitter</a>
+          </li><br>
+          <li><a href="#" style="text-decoration: none; color: white;"><i class="fa-brands fa-instagram"></i>
+              Instagram</a></li><br>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--
+  <footer>
+    Your existing footer content goes here 
+    <p>© 2024 Taxi Booking Service</p>
+  </footer> -->
+  <script>
+    // JavaScript to handle the click event and add the 'active' class to the clicked link
+    document.addEventListener('DOMContentLoaded', function () {
+      var navLinks = document.querySelectorAll('nav a');
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          // Prevent the default link behavior
+          event.preventDefault();
+
+          // Remove 'active' class from all links
+          navLinks.forEach(function (navLink) {
+            navLink.classList.remove('active');
+          });
+
+          // Add 'active' class to the clicked link
+          link.classList.add('active');
+        });
+      });
+    });
+    function msg() {
+      alert('Booked Successfully');
+    }
+  </script>
+</body>
